@@ -31,11 +31,7 @@
 
 ## Usage
 
-To use **splinter**, follow these steps:
-
-## Usage
-
-To use **Splinter**, follow these steps:
+To use **Splint**, follow these steps:
 
 1. **Clone the Repository**:
    ```
