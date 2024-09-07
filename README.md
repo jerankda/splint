@@ -1,6 +1,22 @@
-# splint
+# Splint
 
-**splint** is a lightweight Python linter designed to check various aspects of Python code, from syntax and indentation to naming conventions and code complexity. 
+A fast, simple, and easy-to-use Python linter.
+
+![Build Status](https://github.com/jerankda/splint/actions/workflows/python-publish.yml/badge.svg)
+![License](https://img.shields.io/github/license/jerankda/splint)
+![Version](https://img.shields.io/pypi/v/splint)
+
+
+##Splint is a Python linter designed to help you catch common issues, enforce coding standards, and improve your Python code.
+
+> ⚠️ **Note:** Splint is currently in early development
+
+---
+
+## Installation
+
+```bash
+pip install splint
 
 ## Features
 
