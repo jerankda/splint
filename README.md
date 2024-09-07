@@ -15,9 +15,15 @@ A fast, simple, and easy-to-use Python linter.
 
 ## Installation
 
-```bash
+```
 pip install splint
 ```
+
+## Usage
+```
+splint <path-to-your-python-file>
+```
+
 ## Features
 
 ### Working Features:
@@ -45,21 +51,3 @@ pip install splint
 
 
 
-## Usage
-
-To use **Splint**, follow these steps:
-
-1. **Clone the Repository**:
-   ```
-   git clone https://github.com/jerankda/splint
-   cd simple_linter
-   ```
-2. **Install Dependencies:**
-   ```
-   pip install -r requirements.txt"
-   ```
-3. **Run the Linter:**
-   ```
-   python main.py <path-to-your-python-file>
-   ```
-   Replace <path-to-your-python-file> with the path to the Python file you want to lint.
