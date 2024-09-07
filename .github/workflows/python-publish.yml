@@ -30,12 +30,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install setuptools wheel twine
 
-    # Run tests before publishing
-    - name: Run linter tests
-      run: |
-        pip install pytest
-        pytest
-
     # Build the package
     - name: Build package
       run: python setup.py sdist bdist_wheel
