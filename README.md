@@ -17,7 +17,7 @@ A fast, simple, and easy-to-use Python linter.
 
 ```bash
 pip install splint
-
+```
 ## Features
 
 ### Working Features:
