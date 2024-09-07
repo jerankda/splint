@@ -1,0 +1,48 @@
+# This workflow will build and upload a Python Package using Twine when a release is created
+
+name: Upload Python Package
+
+on:
+  release:
+    types: [published]
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    # Check out the repository
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    # Set up Python
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9'  # or any version you prefer
+
+    # Install dependencies and build the package
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install setuptools wheel twine
+
+    # Run tests before publishing
+    - name: Run linter tests
+      run: |
+        pip install pytest
+        pytest
+
+    # Build the package
+    - name: Build package
+      run: python setup.py sdist bdist_wheel
+
+    # Publish to PyPI
+    - name: Publish package
+      uses: pypa/gh-action-pypi-publish@v1.6.4
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}
+
